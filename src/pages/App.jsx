@@ -13,8 +13,10 @@ export default function App() {
         value={nome}
         onChange={(nome) => setNome(nome.target.value)}
       />
-
-      <h2>Olá, {nome}</h2>
+      {nome
+        ? <h2>Olá, {nome}</h2>
+        : ''
+      }
     </>
   );
 }
